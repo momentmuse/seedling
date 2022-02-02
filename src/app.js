@@ -37,5 +37,3 @@ ScrollTrigger.create({
 ScrollTrigger.addEventListener('refresh', () => scroller.update());
 
 ScrollTrigger.refresh();
-
-console.log('eyeyyoooo connected!!');

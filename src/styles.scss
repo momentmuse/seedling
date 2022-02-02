@@ -29,20 +29,37 @@ $highres: 2008px;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
 
-  body {
-    overflow: hidden;
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
 
-    span {
-      font-style: italic;
-      font-size: inherit;
-      font-weight: 400;
-    }
+  span {
+    font-style: italic;
+    font-size: inherit;
+    font-weight: 400;
   }
 }
 
 .container {
-  background: #ebefbd;
+  background-image: linear-gradient(
+    55deg,
+    hsl(136deg 59% 85%) 0%,
+    hsl(130deg 59% 85%) 18%,
+    hsl(124deg 59% 85%) 26%,
+    hsl(118deg 59% 85%) 33%,
+    hsl(112deg 60% 84%) 39%,
+    hsl(106deg 60% 84%) 44%,
+    hsl(100deg 60% 84%) 50%,
+    hsl(94deg 60% 84%) 56%,
+    hsl(88deg 60% 84%) 61%,
+    hsl(83deg 60% 84%) 67%,
+    hsl(77deg 61% 84%) 74%,
+    hsl(71deg 61% 84%) 82%,
+    hsl(65deg 61% 84%) 100%
+  );
 
   section {
     height: 100vh;
@@ -96,19 +113,13 @@ $highres: 2008px;
         font-style: italic;
         font-size: 2rem;
         display: block;
-        padding: 8px 0;
       }
     }
 
-    .image-wrapper {
-      height: 100vh;
+    img {
+      height: 100%;
       width: 100%;
-
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-      }
+      object-fit: cover;
     }
   }
 
@@ -200,7 +211,7 @@ $highres: 2008px;
       }
     }
 
-    .images-container {
+    .image-container {
       position: relative;
       height: 100%;
 
@@ -208,8 +219,8 @@ $highres: 2008px;
         position: absolute;
         top: 0;
         left: -4rem;
-        max-width: 70%;
-        height: 90vh;
+        max-width: 88%;
+        height: 92vh;
 
         align-self: stretch;
         object-fit: cover;
