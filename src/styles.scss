@@ -140,22 +140,47 @@ $highres: 2008px;
   .section-2 {
     height: 270vh;
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 50% 50%;
+
+    @media (min-width: $laptop) {
+      grid-template-columns: 40% 60%;
+    }
 
     #pin-section-1 {
-      height: 100%;
-      margin-left: 2vw;
+      height: calc(100% - 2.3rem);
+      margin-left: 1rem;
+
+      @media (min-width: $laptop) {
+        height: 100%;
+        margin-left: 2rem;
+      }
 
       #pin-section-2 {
-        height: calc(100% - 102vh);
-        margin-top: 95vh;
-        margin-left: calc(2vw + 5rem);
+        height: calc(100% - 105.5vh);
+        margin-top: 105vh;
+        margin-left: auto;
+        @media (min-width: $laptop) {
+          height: calc(100% - 102vh);
+          margin-top: 95vh;
+          margin-left: calc(2rem + 4rem);
+        }
+
+        blockquote {
+          padding-top: 2.3rem;
+
+          @media (min-width: $laptop) {
+            padding-top: 0;
+          }
+        }
       }
     }
 
     blockquote {
-      font-size: 2.5rem;
+      font-size: 1.8rem;
+      width: max-content;
+      @media (min-width: $tablet) {
+        font-size: 2.5rem;
+      }
     }
 
     .images-container {
@@ -165,8 +190,9 @@ $highres: 2008px;
       #tree-roots {
         position: absolute;
         top: 0;
+        left: -4rem;
         max-width: 70%;
-        height: 100vh;
+        height: 90vh;
 
         align-self: stretch;
         object-fit: cover;
@@ -201,18 +227,18 @@ $highres: 2008px;
 
   .section-3 {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 50% 50%;
+
+    @media (min-width: $laptop) {
+      grid-template-columns: 40% 60%;
+    }
+
     position: relative;
 
-    .image-wrapper {
+    img {
       height: 100%;
       width: 100%;
-
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-      }
+      object-fit: cover;
     }
 
     .copy {
@@ -232,11 +258,17 @@ $highres: 2008px;
 
     .description {
       position: absolute;
-      bottom: 5%;
-      left: 50%;
-      font-size: 1.2rem;
+      bottom: 1rem;
+      right: 1rem;
+      font-size: 1rem;
       font-style: italic;
       font-weight: 400;
+
+      @media (min-width: $tablet) {
+        bottom: 3rem;
+        right: 3rem;
+        font-size: 1.2rem;
+      }
     }
   }
 }
