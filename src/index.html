@@ -6,9 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>seedling.</title>
     <link rel="stylesheet" href="styles.scss" />
-    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
+    <script src="app.js" type="module"></script>
   </head>
   <body>
-    <h1>HI this is the seedling site</h1>
+    <div data-scroll-container class="container">
+      <section class="hero">
+        <div data-scroll data-scroll-speed="3" class="copy">
+          <blockquote>
+            and the day came when the risk to <span>remain</span> tight in a bud
+            was more painful than the risk it took to <span>blossom</span>.
+          </blockquote>
+          <cite> — Anaïs Nin </cite>
+        </div>
+        <div class="image-wrapper">
+          <img src="./../assets/images/tree-low-angle.jpg" alt="" />
+        </div>
+      </section>
+
+      <section class="section-0" data-scroll data-scroll-speed="2">
+        <p
+          data-scroll
+          data-scroll-direction="horizontal"
+          data-scroll-speed="-2"
+        >
+          because even
+        </p>
+        <p data-scroll data-scroll-direction="horizontal" data-scroll-speed="2">
+          the tallest of trees
+        </p>
+      </section>
+
+      <section class="section-1">
+        <div class="image-mask"></div>
+      </section>
+
+      <section class="section-2">
+        <div id="pin-section-1">
+          <blockquote
+            data-scroll
+            data-scroll-sticky
+            data-scroll-target="#pin-section-1"
+          >
+            <span>starts</span>
+          </blockquote>
+          <div id="pin-section-2">
+            <blockquote
+              data-scroll
+              data-scroll-sticky
+              data-scroll-target="#pin-section-2"
+            >
+              from a single seed.
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="images-container">
+          <img
+            data-scroll
+            data-scroll-speed="-2"
+            src="./../assets/images/tree-roots.jpg"
+            id="tree-roots"
+          />
+          <img
+            data-scroll-speed="3"
+            data-scroll-direction="horizontal"
+            src="./../assets/images/sprout-vert.jpg"
+            id="sprout"
+          />
+        </div>
+      </section>
+
+      <section class="section-3">
+        <div class="image-wrapper">
+          <img src="./../assets/images/hands-sapling.jpg" alt="" />
+        </div>
+        <div class="copy" data-scroll data-scroll-speed="3">
+          <blockquote>
+            <h1 class="app-title">seedling.</h1>
+            sprouts autumn 2022
+          </blockquote>
+        </div>
+        <p
+          class="description"
+          data-scroll-position="bottom"
+          data-scroll-speed="2"
+          data-scroll
+        >
+          growing better habits, one day at a time
+        </p>
+      </section>
+    </div>
   </body>
 </html>

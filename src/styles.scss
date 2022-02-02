@@ -1,11 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+$tablet: 768px;
+$laptop: 1024px;
+$highres: 2008px;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Cormorant Infant';
+  color: #2c2813;
+
+  font-size: 12px;
+  @media (min-width: $tablet) {
+    font-size: 18px;
+  }
+  @media (min-width: $laptop) {
+    font-size: 20px;
+  }
+  @media (min-width: $highres) {
+    font-size: 34px;
+  }
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  body {
+    overflow: hidden;
+
+    span {
+      font-style: italic;
+      font-size: inherit;
+      font-weight: 400;
+    }
+  }
 }
 
-body {
-  background-color: cadetblue;
-  color: cornsilk;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.container {
+  background: #ebefbd;
+
+  section {
+    height: 100vh;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 60% 40%;
+
+    .copy {
+      display: grid;
+      align-content: center;
+      padding: 0 1rem;
+      height: 100%;
+
+      blockquote {
+        font-size: 3rem;
+        font-weight: 300;
+
+        @media (min-width: $tablet) {
+          font-size: 3.5rem;
+        }
+
+        &::before {
+          content: '“';
+        }
+
+        &::after {
+          content: '”';
+        }
+      }
+
+      cite {
+        font-weight: 300;
+        font-style: italic;
+        font-size: 2rem;
+        display: block;
+        padding: 8px 0;
+      }
+    }
+
+    .image-wrapper {
+      height: 100vh;
+      width: 100%;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .section-0 {
+    margin-top: 30vh;
+    text-align: center;
+    height: 14vh;
+
+    p {
+      font-size: 3.5rem;
+      @media (min-width: $tablet) {
+        font-size: 4.5rem;
+      }
+    }
+  }
+
+  .section-1 {
+    display: grid;
+    place-content: center;
+    padding: 0 1rem;
+    height: 80vh;
+    margin-bottom: 35vh;
+
+    @media (min-width: $tablet) {
+      height: 100vh;
+    }
+
+    .image-mask {
+      width: 100vw;
+      height: 80vh;
+      background: url('./../assets/images/trees-below.jpg');
+      background-size: cover;
+      background-position-x: 50%;
+      background-position-y: 90%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .section-2 {
+    height: 270vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 40% 60%;
+
+    #pin-section-1 {
+      height: 100%;
+      margin-left: 2vw;
+
+      #pin-section-2 {
+        height: calc(100% - 102vh);
+        margin-top: 95vh;
+        margin-left: calc(2vw + 5rem);
+      }
+    }
+
+    blockquote {
+      font-size: 2.5rem;
+    }
+
+    .images-container {
+      position: relative;
+      height: 100%;
+
+      #tree-roots {
+        position: absolute;
+        top: 0;
+        max-width: 70%;
+        height: 100vh;
+
+        align-self: stretch;
+        object-fit: cover;
+        z-index: 2;
+
+        @media (min-width: $laptop) {
+          top: 0;
+          left: -15rem;
+          max-width: 40vw;
+          height: 30%;
+        }
+      }
+
+      #sprout {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 130vh;
+        align-self: stretch;
+        object-fit: cover;
+
+        @media (min-width: $laptop) {
+          max-width: 100%;
+          height: 200vh;
+          align-self: stretch;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .section-3 {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    position: relative;
+
+    .image-wrapper {
+      height: 100%;
+      width: 100%;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .copy {
+      width: 100%;
+      display: grid;
+      align-content: center;
+
+      blockquote {
+        h1 {
+          font-size: 1.5rem;
+          font-style: italic;
+        }
+        font-size: 3.5rem;
+        margin: 0 2rem;
+      }
+    }
+
+    .description {
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      font-size: 1.2rem;
+      font-style: italic;
+      font-weight: 400;
+    }
+  }
 }
