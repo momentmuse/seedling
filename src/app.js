@@ -30,7 +30,7 @@ ScrollTrigger.create({
   scroller: '.container',
   start: 'top+=30% 50%',
   end: 'bottom-=40% 50%',
-  animation: gsap.to('.image-mask', { backgroundSize: '120%' }),
+  animation: gsap.to('.image-mask', { backgroundSize: '125%' }),
   scrub: 2,
 });
 

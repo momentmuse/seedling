@@ -2,15 +2,17 @@
 @import url('http://fonts.cdnfonts.com/css/league-spartan');
 
 $tablet: 768px;
-$laptop: 1024px;
-$highres: 2008px;
+$laptop: 1200px;
+$highres: 2000px;
+$accent: #38320f;
+$accent-translucent: rgba(44, 40, 19, 0.3);
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Cormorant Infant';
-  color: #38320f;
+  color: $accent;
 
   font-size: 12px;
   @media (min-width: $tablet) {
@@ -33,8 +35,7 @@ $highres: 2008px;
 
 html,
 body {
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
 
   span {
     font-style: italic;
@@ -66,6 +67,7 @@ body {
   }
 
   .hero {
+    position: relative;
     display: grid;
     grid-template-columns: 60% 40%;
 
@@ -96,7 +98,7 @@ body {
           position: absolute;
           left: -1.5rem;
           top: -2rem;
-          color: rgba(44, 40, 19, 0.3);
+          color: $accent-translucent;
         }
 
         &::after {
@@ -104,7 +106,7 @@ body {
           font-size: 10rem;
           font-family: Georgia;
           position: absolute;
-          color: rgba(44, 40, 19, 0.3);
+          color: $accent-translucent;
         }
       }
 
@@ -113,6 +115,15 @@ body {
         font-style: italic;
         font-size: 2rem;
         display: block;
+      }
+
+      #arrow {
+        position: absolute;
+        bottom: 3rem;
+        left: 50%;
+        font-size: 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        color: $accent-translucent;
       }
     }
 
@@ -151,7 +162,6 @@ body {
       width: 100vw;
       height: 80vh;
       background: url('./../assets/images/trees-below.jpg');
-      background-size: cover;
       background-position-x: 50%;
       background-position-y: 90%;
       background-size: 100%;
@@ -190,7 +200,7 @@ body {
         @media (min-width: $laptop) {
           height: calc(100% - 102vh);
           margin-top: 95vh;
-          margin-left: calc(2rem + 4rem);
+          margin-left: calc(2rem + 3.5rem);
         }
 
         blockquote {
@@ -206,7 +216,7 @@ body {
     blockquote {
       font-size: 1.8rem;
       width: max-content;
-      @media (min-width: $tablet) {
+      @media (min-width: $laptop) {
         font-size: 2.5rem;
       }
     }
